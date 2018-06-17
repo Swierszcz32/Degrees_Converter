@@ -8,12 +8,11 @@ public class TaskOfSomething {
 			return FibR(n-1)+FibR(n-2);
 			}
 		
-	
 	//rozwi¹zanie iteracyjne
+		
 		public static int FibI(int n) {
 			int tmp = 0, tmp1 = 1;
-			
-			int fib = 0;
+			int fib = 1;
 			for(int i = 2; i<=n;i++) {
 				fib = tmp + tmp1;
 				tmp = tmp1;
@@ -21,9 +20,8 @@ public class TaskOfSomething {
 			}
 			return fib;
 		}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
+	public static void main(String[] args) {		
 	
 		System.out.println(FibR(10)+"\n"+FibI(10));
 		
