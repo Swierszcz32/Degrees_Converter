@@ -1,6 +1,7 @@
 package pl.java.workExperience;
 
 public class TaskOfSomething {
+	
 
 	//rozwi¹zanie rekurencyjne
 		public static int FibR(int n) {
@@ -24,6 +25,7 @@ public class TaskOfSomething {
 	public static void main(String[] args) {		
 	
 		System.out.println(FibR(10)+"\n"+FibI(10));
+		new TaskOfSomethingGUI(); // test Frame
 		
 	}
 
