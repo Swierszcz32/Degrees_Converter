@@ -1,5 +1,7 @@
 package pl.java.workExperience;
 
+import java.awt.Color;
+
 public class TaskOfSomething {
 	
 
@@ -21,10 +23,13 @@ public class TaskOfSomething {
 			}
 			return fib;
 		}
-		
-	public static void main(String[] args) {		
 	
-		System.out.println(FibR(10)+"\n"+FibI(10));
+		
+	public static void main(String[] args) {
+//		TaskOfSomethingGUI gui = new TaskOfSomethingGUI();
+//		int n = gui.getNumber();
+//	
+//		System.out.println(FibR(n)+"\n"+FibI(n));
 		new TaskOfSomethingGUI(); // test Frame
 		
 	}
