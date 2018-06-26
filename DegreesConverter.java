@@ -26,7 +26,7 @@ public class DegreesConverter extends JFrame implements ActionListener{
 	JTextField textCelcius;
 	JTextField textFarenheit;
 	JButton convertButton;
-	
+	JButton reset;
 	
 	
 	public void initComponents() {
