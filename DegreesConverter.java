@@ -1,8 +1,13 @@
 package pl.java.workExperience;
 import javax.swing.*;
-import java.awt.*;
 
-public class DegreesConverter extends JFrame{
+
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class DegreesConverter extends JFrame implements ActionListener{
 	
 	public DegreesConverter() {
 		super("Converter of Defrees");
@@ -14,6 +19,8 @@ public class DegreesConverter extends JFrame{
 		
 		
 	}
+	double tmpCelcius, tmpFarenheit;
+	
 	JLabel labelCelcius;
 	JLabel labelFarenheit;
 	JTextField textCelcius;
@@ -26,7 +33,6 @@ public class DegreesConverter extends JFrame{
 		labelCelcius = new JLabel("Celcius Degree");
 		labelCelcius.setBounds(20, 20, 150, 20);
 		add(labelCelcius);
-		
 		labelFarenheit = new JLabel("Farenheit Degree");
 		labelFarenheit.setBounds(20, 60, 150, 20);
 		add(labelFarenheit);
@@ -39,9 +45,28 @@ public class DegreesConverter extends JFrame{
 		convertButton = new JButton("Convert");
 		convertButton.setBounds(20, 100, 300, 20);
 		add(convertButton);
-		
+		convertButton.addActionListener(this);
 	}
 	
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if(!textCelcius.getText().equals("")) {
+		tmpCelcius = Double.parseDouble(textCelcius.getText());
+		tmpFarenheit = 32.0 + (9.0/5.0) * tmpCelcius;
+		textFarenheit.setText(String.valueOf(tmpFarenheit));
+		}else if(!textFarenheit.getText().equals("")) {
+			tmpFarenheit = Double.parseDouble(textFarenheit.getText());
+			tmpCelcius = (tmpFarenheit - 32.0)/1.8000;
+			textCelcius.setText(String.valueOf(tmpCelcius));
+		}
+		else {
+			textFarenheit.setText("NO DATA");
+			textCelcius.setText("NO DATA");
+		}
+	}
+
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
